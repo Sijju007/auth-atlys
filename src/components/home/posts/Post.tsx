@@ -1,15 +1,4 @@
-import { MouseEventHandler } from 'react';
-
-type PostProps = {
-  emoji: string;
-  username: string;
-  userProfileImage: string;
-  createdAt: string;
-  post: string;
-  totalComments: number;
-  isEdited?: boolean;
-  onClick: MouseEventHandler<HTMLDivElement>;
-};
+import { PostProps } from './types';
 
 const Post: React.FC<PostProps> = ({
   emoji,

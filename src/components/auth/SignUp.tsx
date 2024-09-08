@@ -1,13 +1,7 @@
 import { useContext, useEffect } from 'react';
 import AuthContext from '../../context/auth/AuthContext';
 import AuthForm from './AuthForm';
-import { UserCredential } from './types';
-
-type SignUpProps = {
-  isModal?: boolean;
-  showLoginModal?: Function;
-  closeModal?: Function;
-};
+import { SignUpProps, UserCredential } from './types';
 
 const SignUp: React.FC<SignUpProps> = ({
   isModal,

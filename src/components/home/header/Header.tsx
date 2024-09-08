@@ -1,8 +1,4 @@
-import React from 'react';
-
-type HeaderProps = {
-  username?: string;
-};
+import { HeaderProps } from './types';
 
 const Header: React.FC<HeaderProps> = ({ username }) => {
   return (

@@ -38,20 +38,20 @@ module.exports = {
         subtitle: ['16px', '24px'],
       },
       dropShadow: {
-        'dark': [
-            '0 6px 6px rgb(255, 255, 255, 0.1)',
-            '0 3px 3px rgb(255, 255, 255, 0.06)'
+        dark: [
+          '0 6px 6px rgb(255, 255, 255, 0.1)',
+          '0 3px 3px rgb(255, 255, 255, 0.06)',
         ],
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
-        }
+        },
       },
       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out'
-      }
+        fadeIn: 'fadeIn 1s ease-in-out',
+      },
     },
   },
   plugins: [],
