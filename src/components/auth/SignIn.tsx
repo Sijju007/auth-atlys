@@ -53,7 +53,11 @@ const SignIn: React.FC<SignInProps> = ({
         setUser(user);
         localStorage.setItem('authUser', JSON.stringify(user));
         sessionStorage.setItem('isLoggedIn', 'true');
-        if (!isModal) window.location.assign('/');
+        if (isModal) {
+          closeModal();
+        } else {
+          window.location.assign('/');
+        }
       } else {
         setIsPasswordIncorrect(true);
       }
