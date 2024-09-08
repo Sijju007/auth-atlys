@@ -1,8 +1,4 @@
-import { MouseEventHandler } from 'react';
-
-type CreatePostProps = {
-  onClick: MouseEventHandler<HTMLDivElement>;
-};
+import { CreatePostProps } from './types';
 
 const CreatePost: React.FC<CreatePostProps> = ({ onClick = () => {} }) => {
   return (

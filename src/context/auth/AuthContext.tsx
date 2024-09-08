@@ -5,23 +5,7 @@ import React, {
   useReducer,
 } from 'react';
 import { UserCredential } from '../../components/auth/types';
-
-type InitialStateProps = {
-  loading: boolean;
-  isLoggedIn: boolean;
-  authUser?: UserCredential | null;
-};
-
-type AuthContextProps = InitialStateProps & {
-  onLogin: Function;
-  onLogout: Function;
-  setUser: Function;
-};
-
-type ActionProps = {
-  type: string;
-  payload?: any;
-};
+import { ActionProps, AuthContextProps, InitialStateProps } from './types';
 
 const initialState = {
   loading: true,

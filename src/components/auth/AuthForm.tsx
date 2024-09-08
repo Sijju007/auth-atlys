@@ -1,34 +1,5 @@
 import { MouseEventHandler, useState } from 'react';
-
-type AuthFormProps = {
-  title: string;
-  subtitle: string;
-  emailLabel: string;
-  emailPlaceHolder: string;
-  usernameLabel?: string;
-  usernamePlaceHolder?: string;
-  passwordLabel: string;
-  passwordPlaceHolder: string;
-  forgetPasswordLabel?: string;
-  buttonText: string;
-  buttonAction: Function;
-  additionalText?: string;
-  additionalCta?: string;
-  additionalCtaAction?: Function;
-  isDismissible?: boolean;
-  isUserInvalid?: boolean;
-  isPasswordIncorrect?: boolean;
-  onResetError?: Function;
-  showLogo?: boolean;
-  isModal?: boolean;
-  onClose?: MouseEventHandler<HTMLDivElement>;
-};
-
-type FormDataProps = {
-  email: string;
-  username: string;
-  password: string;
-};
+import { AuthFormProps, FormDataProps } from './types';
 
 const AuthForm: React.FC<AuthFormProps> = ({
   title,

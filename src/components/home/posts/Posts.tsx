@@ -1,9 +1,6 @@
 import { posts } from '../../../constants/dummy-posts-data';
 import Post from './Post';
-
-type PostsProps = {
-  onPostClick: Function;
-};
+import { PostsProps } from './types';
 
 const Posts: React.FC<PostsProps> = ({ onPostClick = () => {} }) => {
   return (

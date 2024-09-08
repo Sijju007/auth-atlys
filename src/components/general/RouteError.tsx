@@ -2,7 +2,7 @@ import { useRouteError } from 'react-router';
 import Error from './Error';
 import NotFound from './NotFound';
 
-const RouteError = () => {
+const RouteError: React.FC = () => {
   const error: any = useRouteError();
 
   console.error(error);
