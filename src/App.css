@@ -1,0 +1,15 @@
+body {
+  background: hsla(240, 14%, 9%, 1);
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 34px;
+}
