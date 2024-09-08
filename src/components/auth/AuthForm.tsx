@@ -1,4 +1,4 @@
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
 import { AuthFormProps, FormDataProps } from './types';
 
 const AuthForm: React.FC<AuthFormProps> = ({
