@@ -9,7 +9,7 @@ import { UserCredential } from '../../components/auth/types';
 type InitialStateProps = {
   loading: boolean;
   isLoggedIn: boolean;
-  authUser?: UserCredential;
+  authUser?: UserCredential | null;
 };
 
 type AuthContextProps = InitialStateProps & {
@@ -43,6 +43,7 @@ const authReducer = (state: InitialStateProps, action: ActionProps) => {
         ...state,
         loading: false,
         isLoggedIn: false,
+        authUser: null,
       };
     }
     case 'loaded': {
@@ -71,14 +72,14 @@ export const AuthContextProvider: React.FC<PropsWithChildren> = ({
   const onLogin = () => dispatch({ type: 'setLoggedIn' });
   const onLogout = () => dispatch({ type: 'setLoggedOut' });
   const onLoaded = () => dispatch({ type: 'loaded' });
-  const setUser = (user: UserCredential) =>
+  const setUser = (user: UserCredential | null) =>
     dispatch({ type: 'setUser', payload: user });
 
   useEffect(() => {
     const fetchAuthData = async () => {
       try {
         const isLoggedIn = JSON.parse(
-          localStorage.getItem('isLoggedIn') as string
+          sessionStorage.getItem('isLoggedIn') as string
         );
         const authUser = JSON.parse(localStorage.getItem('authUser') as string);
         if (authUser) {
@@ -87,6 +88,7 @@ export const AuthContextProvider: React.FC<PropsWithChildren> = ({
         if (isLoggedIn) {
           onLogin();
         } else {
+          setUser(null);
           onLoaded();
         }
       } catch (e) {
